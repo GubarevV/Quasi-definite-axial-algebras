@@ -19,4 +19,4 @@ anx[9]:=prod(x,cab);;
 N:=NullspaceMat(anx-anx^0);
 
 ######## we get the 1-dimensional eigenspace for the eigenvalue 1:
-######## [ [ -1/2*alp, -1/2, 0, 1, 0, 0, 0, 0, 0 ] ]
+######## gap> [ [ -1/2*alp, -1/2, 0, 1, 0, 0, 0, 0, 0 ] ]
