@@ -1,26 +1,11 @@
 ######## We start with the code 
 ######## https://github.com/AlexeyStaroletov/AxialAlgebras/blob/master/3gen/DataJordanHalf.g
-######## We want to show that ...
-
-b0:=b-2*prod(b,a)+( 2*prod(a,prod(b,a))-prod(a,b));;
-bhalf:=b-alp*a-b0;;
+######## We want to find alpha = (a,b), gamma = (a,c) and beta = (b,c) such that 
+######## 1) alpha, beta, gamma are not equal to 1. 
+######## 2) Moreover, (x_a(b),x_a(c))=1 when x_a(b) is not equal to x_a(c).
 
 xb:=(2*ab - alp*a - b)/(alp-1);
 xc:=(2*ac - gam*a - c)/(gam-1);
 
-pro:=prod(prod(xc,bhalf),bhalf);
-######## gap> [ (-1/2*alp*bet+1/2*alp*phi)/(gam-1), 0, 0, -1/2*alp*gam/(gam-1), 1/4*alp/(-1/2*gam+1/2), -1/4*alp^2/(1/2*gam-1/2),
-  -1/4*alp/(-1/2*gam+1/2), -1/4*alp/(-1/2*gam+1/2), 1/4*alp/(1/2*gam-1/2) ]
-
-prod(xb,xc);
-######## gap> [ (-1/2*alp*gam+1/2*phi)/(1/2*alp*gam-1/2*alp-1/2*gam+1/2), 0, 0, 1/4*gam/(1/4*alp*gam-1/4*alp-1/4*gam+1/4),
-  1/(alp*gam-alp-gam+1), 1/4*alp/(1/4*alp*gam-1/4*alp-1/4*gam+1/4), 1/(-alp*gam+alp+gam-1), 1/(-alp*gam+alp+gam-1),
-  1/(-alp*gam+alp+gam-1) ]
-
-prrg:=2*pro*(gam-1);
-######## gap> [ -alp*bet+alp*phi, 0, 0, -alp*gam, -alp, -alp^2, alp, alp, alp ]
-
-pp:=(-alp*gam+alp+gam-1)*prod(xb,xc);;
-######## gap> [ alp*gam-phi, 0, 0, -gam, -1, -alp, 1, 1, 1 ]
-
-######## We see that pro=C*prod(xb,xc) for some comstant C. Indeed ?
+xb*Gram*xc;
+######## gap> (-alp*gam-bet+2*phi)/(-alp*gam+alp+gam-1)
