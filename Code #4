@@ -1,0 +1,15 @@
+######## We start with the code 
+######## https://github.com/AlexeyStaroletov/AxialAlgebras/blob/master/3gen/DataJordanHalf.g
+######## We want to show that b_0(a), c_0(a) and v(b_half chalf) generate the whole A_0(a) in the case of 3-generated axial algebra <a,b,c>_alg of Jordan type 1/2
+
+b0:=b-2*ab+alp*a;;
+c0:=c-2*ac+gam*a;;
+vbhalfchalf:=prod(2*(ab-alp*a),2*(ac-gam*a))-prod(a,prod(2*(ab-alp*a),2*(ac-gam*a)));
+######## gap> [ alp*gam, 0, 0, -gam, 0, -alp, -1, 1, 1 ]
+prod(b0,c0);
+######## gap> [ -alp*gam+phi, 0, 0, gam, 1, alp, -1, -1, -1 ]
+b0;
+######## [ alp, 1, 0, -2, 0, 0, 0, 0, 0 ]
+c0;
+######## [ gam, 0, 1, 0, 0, -2, 0, 0, 0 ]
+######## Four obtained vectors form a basis in 4-dimensional A_0(a)
