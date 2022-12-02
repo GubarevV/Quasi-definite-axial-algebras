@@ -16,7 +16,26 @@ anx[7]:=prod(x,abc);;
 anx[8]:=prod(x,bac);;
 anx[9]:=prod(x,cab);;
 
-N:=NullspaceMat(anx-anx^0);
+N:=NullspaceMat(anx);
 
-######## we get the 1-dimensional eigenspace for the eigenvalue 1:
-######## gap> [ [ -1/2*alp, -1/2, 0, 1, 0, 0, 0, 0, 0 ] ]
+######## We get the 4-dimensional eigenspace for the eigenvalue 0:
+######## gap>  [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+######## [ 0, 0, 0, (-1/4*alp*bet-1/4*alp*gam+1/2*alp*phi)/(-1/2*alp^2+1/2*alp), 0, -1/2, 1, 0, 0 ], 
+######## [ 0, (1/16*alp*gam+1/16*bet-1/8*phi)/(-1/4*alp+1/4), (1/16*alp^2-1/8*alp+1/16)/(-1/4*alp+1/4),-1/2*gam, -1/2, 1/2*alp-1/2, 0, 1, 0 ],
+######## [ 0, (-1/4*alp*gam-1/4*bet+1/2*phi)/(alp-1), (-alp^2+2*alp-1)/(4*alp-4), (-1/4*alp*gam-1/4*bet+1/2*phi)/(-1/2*alp+1/2), -1/2, -1/2*alp, 0, 0, 1 ] ]
+######## We see that dim N = 4 by the 1th, 7th, 8th, and 9th coordinates.
+
+M:=NullspaceMat(anx-1/2*anx^0);
+
+######## We get the 4-dimensional eigenspace for the eigenvalue 1/2:
+######## gap>  [ [ -alp, 0, 0, 1, 0, 0, 0, 0, 0 ], 
+######## [ (-1/4*alp*bet+1/2*alp*phi-1/4*phi)/(-1/2*alp+1/2), (-1/2*bet+1/2*phi)/(alp-1), 0, 0, -1/2, 0, 1, 0, 0 ],
+######## [ (1/8*alp^2*gam-1/4*alp*phi+1/8*phi)/(1/4*alp-1/4), (1/4*alp*bet*gam-1/2*alp*gam*phi-1/4*bet*phi+1/2*phi^2)/(-1/2*alp*bet+alp*phi+1/2*bet-phi), 0, 0, 0, -1/2*alp, 0, 1, 0 ],
+######## [ (-1/4*alp^2*gam-1/4*alp*bet+1/2*alp*phi)/(-1/2*alp+1/2), (1/4*alp*bet*gam-1/2*alp*gam*phi+1/4*bet^2-bet*phi+phi^2)/(-1/2*alp*bet+alp*phi+1/2*bet-phi), 0, 0, -1/2, -1/2*alp, 0, 0, 1 ] ]
+######## We see that dim N = 4 by the 4th, 7th, 8th, and 9th coordinates.
+
+S:=NullspaceMat(anx-1*anx^0);
+
+######## We get the 1-dimensional eigenspace for the eigenvalue 1:
+######## gap>  [ [ -1/2*alp, -1/2, 0, 1, 0, 0, 0, 0, 0 ] ]
+######## Hence, dim S = 1, and dim S can not be greater, since dim N + dim M = 8 for all values of alp, bet, gam, and phi.
