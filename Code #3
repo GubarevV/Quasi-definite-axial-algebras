@@ -31,11 +31,11 @@ prod(a,cc);
 
 b-xb-(b*Gram*a)*(a-xb);
 ######## gap> [ -2*alp, 0, 0, 2, 0, 0, 0, 0, 0 ]
-brk> c-xc-(c*Gram*a)*(a-xc);
+c-xc-(c*Gram*a)*(a-xc);
 ######## gap> [ -2*gam, 0, 0, 0, 0, 2, 0, 0, 0 ]
-brk> btau-xbtau-(btau*Gram*a)*(a-xbtau);
+btau-xbtau-(btau*Gram*a)*(a-xbtau);
 ######## gap> [ -8*bet*gam-2*alp+8*phi, 0, 0, 2, 0, 8*bet, -8, 0, 0 ]
-brk> cc-xcc-(xcc*Gram*a)*(a-xcc);
+cc-xcc-(xcc*Gram*a)*(a-xcc);
 ######## gap> [ (64*alp^2*gam^2+16*alp^2*gam+16*alp*bet*gam-32*alp*gam^2-64*alp*gam*phi+4*alp*bet+8*alp*gam-16*alp*phi+4*gam^2+16*gam*phi-3*gam-4*phi)/(16*alp^2*gam+4*alp\
 *bet-8*alp*gam-16*alp*phi+gam+4*phi-1), 
   (256*alp^3*gam^2+128*alp^2*bet*gam-128*alp^2*gam^2-512*alp^2*gam*phi+16*alp*bet^2-32*alp*bet*gam-128*alp*bet*phi+16*alp*gam^2+192*alp*gam*phi+256*alp*phi^2+4*bet*gam+16*bet*phi-16*gam*phi-64*phi^2)/(16*alp^2*gam+4*alp*bet-8*alp*gam-\
